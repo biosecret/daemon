@@ -6,13 +6,12 @@ import (
 	"net"
 	"os"
 
+	"github.com/biosecret/daemon/proto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
-
-	"github.com/biosecret1/daemon/proto"
 )
 
-const socketPath = "/var/run/ztna.sock" // Đường dẫn Unix socket
+const socketPath = "/var/run/ztna.sock"
 
 type DaemonServer struct {
 	proto.UnimplementedDaemonServiceServer
