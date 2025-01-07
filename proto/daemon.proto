@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package proto;
+
+service DaemonService {
+    rpc StartVPN (Empty) returns (Response);
+    rpc StopVPN (Empty) returns (Response);
+    rpc GetStatus (Empty) returns (Response);
+}
+
+message Empty {}
+
+message Response {
+    string message = 1;
+}
+
